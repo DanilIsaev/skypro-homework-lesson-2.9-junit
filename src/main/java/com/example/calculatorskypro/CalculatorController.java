@@ -20,7 +20,12 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/plus")
-    public String calculatorPlus(@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2){
+    public String calculatorPlus(@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2) {
         return calculatorService.calculatorPlus(num1, num2);
+    }
+
+    @GetMapping(path = "/minus")
+    public String calculatorMinus(@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2) {
+        return calculatorService.calculatorMinus(num1, num2);
     }
 }

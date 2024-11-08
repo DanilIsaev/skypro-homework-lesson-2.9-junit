@@ -14,13 +14,13 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public String calculatorPlus(Integer num1, Integer num2) {
         Integer sum = num1 + num2;
-        String result = String.format("%d + %d = %d", num1, num2, sum);
-        return result;
+        return outputResult(num1, num2, "+", sum);
     }
 
     @Override
     public String calculatorMinus(Integer num1, Integer num2) {
-        return "";
+        Integer minus = num1 - num2;
+        return outputResult(num1, num2, "-", minus);
     }
 
     @Override
@@ -30,8 +30,15 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public String calculatorDivide(Integer num1, Integer num2) {
-        return "";
+        if (num2 == 0) {
+            return "Деление на 0 невозможно";
+        } else {
+            return "";
+        }
     }
 
+    private String outputResult(Integer num1, Integer num2, String action, Integer result) {
+        return String.format("%d %s %d = %d", num1, action, num2, result);
+    }
 
 }
