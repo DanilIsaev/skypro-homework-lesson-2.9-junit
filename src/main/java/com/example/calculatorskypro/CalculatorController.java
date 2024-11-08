@@ -28,4 +28,14 @@ public class CalculatorController {
     public String calculatorMinus(@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2) {
         return calculatorService.calculatorMinus(num1, num2);
     }
+
+    @GetMapping(path = "/divide")
+    public String calculatorDivide(@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2){
+        return  calculatorService.calculatorDivide(num1,num2);
+    }
+
+    @GetMapping(path = "/multiply")
+    public String calculatorMultiply(@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2){
+        return  calculatorService.calculatorMultiply(num1,num2);
+    }
 }

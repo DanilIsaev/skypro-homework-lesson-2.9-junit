@@ -1,7 +1,6 @@
 package com.example.calculatorskypro;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
@@ -13,19 +12,20 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public String calculatorPlus(Integer num1, Integer num2) {
-        Integer sum = num1 + num2;
-        return outputResult(num1, num2, "+", sum);
+        Integer result = num1 + num2;
+        return outputResult(num1, num2, "+", result);
     }
 
     @Override
     public String calculatorMinus(Integer num1, Integer num2) {
-        Integer minus = num1 - num2;
-        return outputResult(num1, num2, "-", minus);
+        Integer result = num1 - num2;
+        return outputResult(num1, num2, "-", result);
     }
 
     @Override
     public String calculatorMultiply(Integer num1, Integer num2) {
-        return "";
+        Integer result = num1 * num2;
+        return outputResult(num1, num2, "*", result);
     }
 
     @Override
@@ -33,7 +33,8 @@ public class CalculatorServiceImpl implements CalculatorService {
         if (num2 == 0) {
             return "Деление на 0 невозможно";
         } else {
-            return "";
+            Integer result = num1 / num2;
+            return outputResult(num1, num2, "/", result);
         }
     }
 
