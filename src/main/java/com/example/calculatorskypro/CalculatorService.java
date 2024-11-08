@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface CalculatorService {
     String calculatorWelcome();
 
-    String calculatorPlus(float num1, float num2);
+    String calculatorPlus(Integer num1, Integer num2);
 
-    String calculatorMinus();
+    String calculatorMinus(Integer num1, Integer num2);
 
-    String calculatorMultiply();
+    String calculatorMultiply(Integer num1, Integer num2);
 
-    String calculatorDivide();
+    String calculatorDivide(Integer num1, Integer num2);
 }

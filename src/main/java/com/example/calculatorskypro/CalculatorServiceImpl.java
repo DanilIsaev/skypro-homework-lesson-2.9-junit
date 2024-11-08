@@ -12,24 +12,24 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
 
     @Override
-    public String calculatorPlus(float num1, float num2) {
-        float result = num1 + num2;
-        String str = String.format("%f + %f = %f", num1, num2, result);
-        return str;
+    public String calculatorPlus(Integer num1, Integer num2) {
+        Integer sum = num1 + num2;
+        String result = String.format("%d + %d = %d", num1, num2, sum);
+        return result;
     }
 
     @Override
-    public String calculatorMinus() {
+    public String calculatorMinus(Integer num1, Integer num2) {
         return "";
     }
 
     @Override
-    public String calculatorMultiply() {
+    public String calculatorMultiply(Integer num1, Integer num2) {
         return "";
     }
 
     @Override
-    public String calculatorDivide() {
+    public String calculatorDivide(Integer num1, Integer num2) {
         return "";
     }
 
