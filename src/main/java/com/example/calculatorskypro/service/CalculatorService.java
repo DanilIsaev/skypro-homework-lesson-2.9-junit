@@ -1,6 +1,4 @@
-package com.example.calculatorskypro;
-
-import org.springframework.web.bind.annotation.RequestParam;
+package com.example.calculatorskypro.service;
 
 public interface CalculatorService {
     String calculatorWelcome();
