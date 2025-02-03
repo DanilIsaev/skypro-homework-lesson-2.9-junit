@@ -1,5 +1,6 @@
-package com.example.calculatorskypro;
+package com.example.calculatorskypro.service;
 
+import com.example.calculatorskypro.exception.ZeroDevisionException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,7 +32,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public String calculatorDivide(Integer num1, Integer num2) {
         if (num2 == 0) {
-            return "Деление на 0 невозможно";
+            throw new ZeroDevisionException();
         } else {
             Integer result = num1 / num2;
             return outputResult(num1, num2, "/", result);
