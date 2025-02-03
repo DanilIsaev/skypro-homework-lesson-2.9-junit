@@ -36,7 +36,7 @@ class CalculatorServiceImplTest {
     }
 
     @Test
-    void calculatorDivideZero() {
+    void calculatorDivideZeroException() {
         assertThrows(ZeroDevisionException.class, () -> calculatorServiceTest.calculatorDivide(NUM2, ZERO));
     }
 
